@@ -1,0 +1,224 @@
+<?php include("template_base/header.php"); ?>
+
+  <main>
+    <div class="grid-root">
+      <div class="grid-container">
+        <div class="grid-slider playing">
+          <button class="grid-slider-prev">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+              style="color: white"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"
+              ></path>
+            </svg></button
+          ><button class="grid-slider-next">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+              style="color: white"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"
+              ></path>
+            </svg>
+          </button>
+          <div class="grid-slides grid-selected-1">
+            <div class="grid-item" id="slider-2">
+              <div class="grid-item-controls"></div>
+              <div class="grid-item-info">
+                <p class="grid-item-info--name">SAP - Hilo Azul</p>
+                <p class="grid-item-info--author">Miguel Vila</p>
+              </div>
+              <div style="width: 100%; height: 923.625px">
+                <div
+                  data-vimeo-initialized="true"
+                  style="width: 100%; height: 100%; overflow: hidden"
+                >
+                  <iframe
+                    src="https://player.vimeo.com/video/737718438?h=4027836ac9&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;autoplay=1&amp;autopause=0&amp;controls=0&amp;loop=1&amp;app_id=122963"
+                    width="426"
+                    height="240"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen=""
+                    title="Miguel Vila / Hilo Azul / SAP"
+                    data-ready="true"
+                    style="width: 100%; height: 100%"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" id="slider-2">
+              <div class="grid-item-controls show"></div>
+              <div class="grid-item-info hide">
+                <p class="grid-item-info--name">
+                  BCP - Cuenta Millonaria - Tatuaje
+                </p>
+                <p class="grid-item-info--author">Daniel + Rafo</p>
+              </div>
+              <div style="width: 100%; height: 923.625px">
+                <div
+                  data-vimeo-initialized="true"
+                  style="width: 100%; height: 100%; overflow: hidden"
+                >
+                  <iframe
+                    src="https://player.vimeo.com/video/734047632?h=a0e7898f10&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;autoplay=1&amp;autopause=0&amp;controls=0&amp;loop=1&amp;app_id=122963"
+                    width="426"
+                    height="240"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen=""
+                    title="Daniel + Rafo / Cuenta Millonaria - Tatuaje / BCP"
+                    data-ready="true"
+                    style="width: 100%; height: 100%"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" id="slider-1">
+              <div class="grid-item-controls"></div>
+              <div class="grid-item-info">
+                <p class="grid-item-info--name">UTEC - Metaverso UTEC</p>
+                <p class="grid-item-info--author">Juan Diego Servat</p>
+              </div>
+              <div style="width: 100%; height: 923.625px">
+                <div
+                  data-vimeo-initialized="true"
+                  style="width: 100%; height: 100%; overflow: hidden"
+                >
+                  <iframe
+                    src="https://player.vimeo.com/video/731528173?h=96af9a8b39&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;autoplay=1&amp;autopause=0&amp;controls=0&amp;loop=1&amp;app_id=122963"
+                    width="426"
+                    height="240"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen=""
+                    title="Juan Diego Servat / Metaverso UTEC / UTEC"
+                    data-ready="true"
+                    style="width: 100%; height: 100%"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item" id="slider-1">
+              <div class="grid-item-controls"></div>
+              <div class="grid-item-info">
+                <p class="grid-item-info--name">Changan Uni-T 2022</p>
+                <p class="grid-item-info--author">Josefina Pieres</p>
+              </div>
+              <div style="width: 100%; height: 923.625px">
+                <div
+                  data-vimeo-initialized="true"
+                  style="width: 100%; height: 100%; overflow: hidden"
+                >
+                  <iframe
+                    src="https://player.vimeo.com/video/719687641?h=e791cf577f&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1&amp;autoplay=1&amp;autopause=0&amp;controls=0&amp;loop=1&amp;app_id=122963"
+                    width="426"
+                    height="240"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen=""
+                    title="Josefina Pieres / Lanzamiento UNI-T 2022 / Changan"
+                    data-ready="true"
+                    style="width: 100%; height: 100%"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-slider-dots">
+            <div class="grid-slider-dot"></div>
+            <div class="grid-slider-dot active"></div>
+            <div class="grid-slider-dot"></div>
+            <div class="grid-slider-dot"></div>
+          </div>
+          <button class="grid-slider-down">
+            <img src="/static/media/icon-scroll-down.bbf41f5a.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="grid-container gap" id="grid-videos">
+        <div class="grid-item">
+          <div class="grid-item-hover">
+            <p class="grid-item-hover--name">
+              BCP - Cuenta Millonaria - Rapada
+            </p>
+            <p class="grid-item-hover--author">Daniel + Rafo</p>
+          </div>
+          <img
+            src="https://d3e0ws1qnk7y4e.cloudfront.net/BCP Rapada.jpg"
+            alt="imagen"
+          />
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-hover">
+            <p class="grid-item-hover--name">
+              Interbank - Vas a Retirar tu AFP
+            </p>
+            <p class="grid-item-hover--author">Daniel Martin Rodriguez</p>
+          </div>
+          <img
+            src="https://d3e0ws1qnk7y4e.cloudfront.net/Interbank - vas a retirar tu AFP.jpg"
+            alt="imagen"
+          />
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-hover">
+            <p class="grid-item-hover--name">Geely - Tu Geely Sabe</p>
+            <p class="grid-item-hover--author">Daniel + Rafo</p>
+          </div>
+          <img
+            src="https://d3e0ws1qnk7y4e.cloudfront.net/daniel%20%2B%20rafo%20-%20geely.jpg"
+            alt="imagen"
+          />
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-hover">
+            <p class="grid-item-hover--name">Caja Piura - 40 Aniversario</p>
+            <p class="grid-item-hover--author">Jeff Carrera</p>
+          </div>
+          <img
+            src="https://d3e0ws1qnk7y4e.cloudfront.net/Caja Piura.JPG"
+            alt="imagen"
+          />
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-hover">
+            <p class="grid-item-hover--name">Ford - Ford Escape 2020</p>
+            <p class="grid-item-hover--author">Rafa Carvalho</p>
+          </div>
+          <img
+            src="https://d3e0ws1qnk7y4e.cloudfront.net/Ford Escape 2020.jpg"
+            alt="imagen"
+          />
+        </div>
+        <div class="grid-item">
+          <div class="grid-item-hover">
+            <p class="grid-item-hover--name">Pepsi - #ModoFutbol</p>
+            <p class="grid-item-hover--author">Diego Fried</p>
+          </div>
+          <img
+            src="https://d3e0ws1qnk7y4e.cloudfront.net/PEPSI+Modo+Futbol.JPG"
+            alt="imagen"
+          />
+        </div>
+      </div>
+    </div>
+  </main>
+
+<?php include("template_base/footer.php"); ?>
