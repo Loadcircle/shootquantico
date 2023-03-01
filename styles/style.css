@@ -752,7 +752,8 @@ button.swiper-pagination-bullet {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 100
+    z-index: 100;
+    position: fixed;
 }
 
 @media only screen and (max-width: 425px) {
@@ -867,12 +868,8 @@ span.icon_down:hover {
     transition: .2s
 }
 
-.submenu-directores.show {
+.submenu-directores.active {
     display: block
-}
-
-.submenu-directores.hide {
-    display: none
 }
 
 .submenu-directores {
@@ -980,14 +977,14 @@ span.icon_down:hover {
     }
 }
 
-.menu-secondary-navigation>ul>li.li-active {
+.menu-secondary-navigation>ul>li.active {
     cursor: pointer;
     color: #fff;
     border-bottom: 5px solid #00a5b5
 }
 
 @media only screen and (max-width: 425px) {
-    .menu-secondary-navigation>ul>li.li-active {
+    .menu-secondary-navigation>ul>li.active {
         border-bottom:3px solid #00a5b5
     }
 }
@@ -1038,14 +1035,14 @@ span.icon_down:hover {
     color: #000
 }
 
-.menu-languages>ul>li,.menu-languages>ul>li.lang-active {
+.menu-languages>ul>li,.menu-languages>ul>li.active {
     text-decoration: none;
     font-family: "Montserrat",sans-serif;
     font-size: 14px;
     font-weight: 700
 }
 
-.menu-languages>ul>li.lang-active {
+.menu-languages>ul>li.active {
     background: #000;
     color: #fff
 }
@@ -1156,7 +1153,7 @@ span.icon_down:hover {
     }
 }
 
-.colab button.colab--scroll-bottom {
+.colab .colab--scroll-bottom {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -1171,7 +1168,7 @@ span.icon_down:hover {
 }
 
 @media only screen and (max-width: 768px) {
-    .colab button.colab--scroll-bottom {
+    .colab .colab--scroll-bottom {
         display:none
     }
 }

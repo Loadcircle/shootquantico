@@ -5,6 +5,26 @@
         <div class="ps-container">
           <div class="grid-item" id="ps-banner">
             <div class="grid-item-controls"></div>
+            
+            <!-- <div style="width: 100%; height: 100vh">
+              <div
+                style="width: 100%; height: 100%; overflow: hidden"
+                data-vimeo-initialized="true"
+              >
+                <iframe
+                  src="https://player.vimeo.com/video/256965529?h=e8d8f29e49&amp;title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;autopause=0&amp;controls=0&amp;app_id=122963"
+                  width="640"
+                  height="360"
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen=""
+                  title="Production Service // Film in Peru"
+                  data-ready="true"
+                  style="width: 100%; height: 100%"
+                ></iframe>
+              </div>
+            </div> -->
+
             <div style="width: 100%; height: 100vh">
               <div
                 class="react-player__preview"
@@ -91,5 +111,26 @@
         </div>
       </div>
     </main>
+    
+    <div style="padding:56.25% 0 0 0;position:relative;">
+              <iframe src="https://player.vimeo.com/video/801232822?h=dffb913144&title=0&byline=0&portrait=0&controls=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+              </iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+
+            <script>
+              
+              var iframe = document.querySelector('iframe');
+              var player = new Vimeo.Player(iframe);
+
+              player.on('play', function() {
+                  console.log('played the video!');
+              });
+
+              player.getVideoTitle().then(function(title) {
+                  console.log('title:', title);
+              });
+            </script>
+
     
 <?php include("template_base/footer.php"); ?>

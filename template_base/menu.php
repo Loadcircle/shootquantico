@@ -29,7 +29,7 @@
           /></span>
         </li>
         <li class="item-subdirectores">
-          <ul class="submenu-directores hide">
+          <ul class="submenu-directores">
             <li>Diego Fried</li>
             <li>Hector Orbegoso</li>
             <li>Ivan Vaccaro</li>
@@ -62,16 +62,16 @@
     </div>
     <div class="menu-secondary-navigation">
       <ul>
-        <li class="">U.S.</li>
-        <li class="">PERÚ</li>
-        <li class="li-active">COLOMBIA</li>
-        <li class="">MEXICO</li>
+        <li class="countryBtn" data-country="us">U.S.</li>
+        <li class="countryBtn" data-country="peru">PERÚ</li>
+        <li class="countryBtn active" data-country="colombia">COLOMBIA</li>
+        <li class="countryBtn" data-country="mexico">MEXICO</li>
       </ul>
     </div>
     <div class="menu-languages">
       <ul>
-        <li class="lang-active">EN</li>
-        <li class="">ES</li>
+        <li data-lang="en" class="langBtn active">EN</li>
+        <li data-lang="es" class="langBtn">ES</li>
       </ul>
     </div>
     <div class="menu-social-links">

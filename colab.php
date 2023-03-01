@@ -14,10 +14,10 @@
             best way as we have been doing during these years.
           </p>
         </div>
-        <button class="colab--scroll-bottom">
-          <img src="/static/media/icon-scroll-down.bbf41f5a.svg" alt="" />
-        </button>
-        <div class="colab--bottom">
+        <a href="#colabContent" class="colab--scroll-bottom">
+          <img src="./assets/icon-scroll-down.bbf41f5a.svg" alt="" />
+        </a>
+        <div class="colab--bottom" id="colabContent">
           <div class="colab--bottom--img1"></div>
           <div class="colab--bottom--img2"></div>
           <div class="colab--bottom--img3"></div>
