@@ -14,10 +14,7 @@ const changeCopyByLang = ()=>{
         esContent.forEach(e=>e.style.display = 'block');
     }
 };
-
-const changeDirectorsByCountry = ()=>{
-    console.log('Country :', localStorage.getItem('country'));
-}
+changeCopyByLang();
 
 class MenuController{
     constructor(){
@@ -30,6 +27,10 @@ class MenuController{
         this.init();
     }
     init(){
+        //set selected country
+        this.setSelectedCountry();
+        this.setSelectedLang();
+
         this.openMenuBtn.onclick = ()=>this.openMenu();
         this.closeMenuBtn.onclick = ()=>this.closeMenu();
         this.displayDirectorsBtn.onclick = ()=>this.displayDirectors();
@@ -63,7 +64,7 @@ class MenuController{
 
             localStorage.setItem('lang', btn.dataset.lang);
 
-            changeCopyByLang();
+            window.location.reload();
         }
     }
     countryController(btn){
@@ -73,10 +74,29 @@ class MenuController{
         //validate if not the same lang so we dont retrigger any function
         if(localStorage.getItem('country') != btn.dataset.country){
             localStorage.setItem('country', btn.dataset.country);
-
-            changeDirectorsByCountry();
+            dispatchEvents('country_changed', document);
+            window.location.reload();
         }
-
+    }
+    setSelectedCountry(){
+        const country = localStorage.getItem('country') ? localStorage.getItem('country') : 'peru';
+        const countryBtn = this.menu.querySelector(`.countryBtn[data-country="${country}"]`);
+        if(countryBtn){
+            countryBtn.classList.add('active'); 
+        } 
+        else{
+            this.menu.querySelector(`.countryBtn[data-country=peru]`).classList.add('active');
+        }
+    }
+    setSelectedLang(){
+        const lang = localStorage.getItem('lang') ? localStorage.getItem('lang') : 'es';
+        const langBtn = this.menu.querySelector(`.langBtn[data-lang="${lang}"]`);
+        if(langBtn){
+            langBtn.classList.add('active'); 
+        } 
+        else{
+            this.menu.querySelector(`.langBtn[data-lang=peru]`).classList.add('active');
+        }
     }
 }
 
@@ -92,6 +112,14 @@ function openModal(modal){
     document.body.style.overflow = 'hidden';
     modal.classList.add('active');
     dispatchEvents('open_modal', modal);
+    
+    const iframe = modal.querySelector('iframe');
+    if(iframe){
+        const player = new Vimeo.Player(iframe);
+        player.setCurrentTime(0);
+        player.play();
+    }
+
     modal.scrollTo(0, 0);
     setTimeout(function(){
         modal.classList.add('visible_modal');
@@ -103,6 +131,13 @@ function closeModal(modal){
     setTimeout(function(){
         modal.classList.remove('active');
         dispatchEvents('close_modal', modal);
+
+        const iframe = modal.querySelector('iframe');
+        if(iframe){
+            const player = new Vimeo.Player(iframe);
+            player.setCurrentTime(0);
+            player.pause();
+        }
     },450);
 }
 //close modals on Escape key
@@ -143,39 +178,36 @@ class DirectorsController{
         this.modalsContainer = document.querySelector('.modalsContainer');
         this.directorsData = directorsData;
         this.country = localStorage.getItem('country') || 'peru';
+        this.tabs = [];
+        this.modals = [];
+        this.data = null;
         this.init();
     }
     init(){
-        this.listenerController();
-    }
-    listenerController(){
-        this.tabs = this.tabsContainer.querySelectorAll('.gridTab');
+        this.data = this.directorsData[this.country] ? this.directorsData[this.country] : this.directorsData['peru'];
+        this.setTitleCountry();
+        this.printTabs();
+        this.changeDirector(this.tabs[0]);
+
+        //this tabs is created in print tabs method
         this.tabs.forEach(e=>{
             e.onclick = ()=>this.changeDirector(e);
         });
-
-        this.directors = document.querySelectorAll('.itemDirector');
     }
     changeDirector(tab){
         this.tabs.forEach(e=>e.classList.remove('active'));
         tab.classList.add('active');
         const directorName = tab.dataset.director;
-        
-        if(!this.directorsData[this.country]) return null;
-        
-        const director = this.directorsData[this.country].find(e=>e.director == directorName);
+                
+        const director = this.data.find(e=>e.director == directorName);
 
         if(!director) return null;
-
-        this.directorsContainer.innerHTML = '';
-        this.modalsContainer.innerHTML = '';
 
         let videoContent = '';
         let modalContent = '';
         director.videos.forEach((video, index)=>{
-
             videoContent += `
-            <div class="grid-item itemDirector toggleModal" data-target="video_${index}">
+            <div class="grid-item itemDirector toggleModal" data-target="modalVideo_${index}">
                 <div class="grid-item-hover">
                 <p class="grid-item-hover--name">${video.title}</p>
                 </div>
@@ -183,7 +215,7 @@ class DirectorsController{
             </div>`;
 
             modalContent += `           
-            <div class="modalContainer" id="modal_1">
+            <div class="modalContainer" id="modalVideo_${index}">
                 <div class="grid-popup">
                     <div class="grid-popup-container modalContent">
                         <div style="width: 100%; height: 100%">
@@ -192,7 +224,7 @@ class DirectorsController{
                             style="width: 100%; height: 100%; overflow: hidden"
                         >
                             <iframe
-                            src="${video.video}?h=195b596d02&amp;title=0&amp;byline=0&amp;portrait=0&amp;playsinline=0&amp;autoplay=1&amp;autopause=0&amp;app_id=122963"
+                            src="${video.video}?title=0&amp;byline=0&amp;portrait=0&amp;playsinline=0&amp;autoplay=0&amp;autopause=0&amp;app_id=122963"
                             width="426"
                             height="240"
                             frameborder="0"
@@ -231,6 +263,19 @@ class DirectorsController{
 
         startModals();
     }
+    printTabs(){        
+        let content = '';
+        this.data.forEach((data, index)=>{
+            content+=`<div class="grid-tab gridTab ${index == 1 ? index : ''}" data-director="${data.director}"><p>${data.director}</p></div>`
+        });
+        
+        this.tabsContainer.innerHTML = content;        
+        this.tabs = this.tabsContainer.querySelectorAll('.gridTab');
+    }
+    setTitleCountry(){
+        const countryTitle = document.querySelector('#countryTitle');
+        countryTitle.innerText = this.country;
+    }
 }
 
 const directorsData = {
@@ -244,9 +289,9 @@ const directorsData = {
                     video: 'https://player.vimeo.com/video/739040598',
                 },
                 {                    
-                    title: '',
-                    placeholder: '',
-                    video: '',
+                    title: 'BRAHMA - LA ENVIDIA SANA',
+                    placeholder: 'https://d3e0ws1qnk7y4e.cloudfront.net/brahma envidia sana.jpg',
+                    video: 'https://player.vimeo.com/video/739040598',
                 },
             ],
         },
@@ -275,8 +320,57 @@ const directorsData = {
             ],
         },
     ],
-    peru: [],
+    peru: [
+        {
+            director: 'Alvaro Stocker',
+            videos: [
+                {                    
+                    title: 'NESPRESSO - MASTICAR',
+                    placeholder: 'https://d3e0ws1qnk7y4e.cloudfront.net/Nespresso - Masticar.jpg',
+                    video: 'https://player.vimeo.com/video/474869636',
+                },                
+            ],
+        },
+        {
+            director: 'Diego Fried',
+            videos: [
+                
+            ],
+        },
+        {
+            director: 'Ivan Vaccaro',
+            videos: [
+                
+            ],
+        },
+        {
+            director: 'Jose Navarro',
+            videos: [
+                
+            ],
+        },
+        {
+            director: 'Josefina Pieres',
+            videos: [
+                
+            ],
+        },
+        {
+            director: 'Juan Diego Servat',
+            videos: [
+                
+            ],
+        },
+        {
+            director: 'Rosa Maria Santisteban',
+            videos: [
+                
+            ],
+        },
+    ],
     mexico: [],
     'u.s.': [],
 }
-const directorController = new DirectorsController(directorsData);
+
+
+// const directorController = new DirectorsController(directorsData);

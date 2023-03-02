@@ -1,5 +1,12 @@
 <?php include("template_base/header.php"); ?>
 
+<style>
+  @media only screen and (min-width: 1250px) {
+    .ps-info-right{
+      margin-left: 20px;
+    }
+  }
+</style>
     <main>
       <div class="ps-root">
         <div class="ps-container">
@@ -73,27 +80,50 @@
             </a>
           </div>
           <div class="ps-info" id="ps-info">
-            <h1 class="ps-info--title">WHAT WE OFFER?</h1>
+            <h1 class="ps-info--title esContent">¿QUÉ OFRECEMOS?</h1>
+            <h1 class="ps-info--title enContent">WHAT WE OFFER?</h1>
             <div class="ps-info-right">
-              <p class="ps-info--text">
-                Our bespoke production services have engendered a diverse stream
-                of loyal partners from all over the world. Vested in the
-                creation of your project, we are here to guide you as to the
-                benefits of shooting with union or non union talent and/or crew.
-                Additionally, we make sure that casting, location scouting,
-                insurance requirements, payroll, celebrity sourcing, and client
-                services are customized to the specific needs of your project.
-              </p>
-              <p class="ps-info--text">
-                With offices in CDMX, Bogota, Lima and Miami , we are able to
-                execute shoots in diverse formats- from DSLR to virtual reality,
-                digital, film, etc.- all across South America including Mexico,
-                Miami, LA and the Caribbean. No job is too large or too small as
-                vetted and professional solutions can be tailored to fit
-                virtually any budget. Some commercial, web and music video cost
-                estimates as well as library location proposals can be turned
-                around in 24 hours or less.
-              </p>
+              <div class="enContent">                
+                <p class="ps-info--text">
+                  Our bespoke production services have engendered a diverse stream
+                  of loyal partners from all over the world. Vested in the
+                  creation of your project, we are here to guide you as to the
+                  benefits of shooting with union or non union talent and/or crew.
+                  Additionally, we make sure that casting, location scouting,
+                  insurance requirements, payroll, celebrity sourcing, and client
+                  services are customized to the specific needs of your project.
+                </p>
+                <p class="ps-info--text">
+                  With offices in CDMX, Bogota, Lima and Miami , we are able to
+                  execute shoots in diverse formats- from DSLR to virtual reality,
+                  digital, film, etc.- all across South America including Mexico,
+                  Miami, LA and the Caribbean. No job is too large or too small as
+                  vetted and professional solutions can be tailored to fit
+                  virtually any budget. Some commercial, web and music video cost
+                  estimates as well as library location proposals can be turned
+                  around in 24 hours or less.
+                </p>
+              </div>
+              <div class="esContent">                
+                <p class="ps-info--text">
+                  Nuestros servicios de producción a medida han generado un flujo diverso 
+                  de socios leales de todo el mundo. Comprometidos con la creación de su 
+                  proyecto, estamos aquí para guiarle en cuanto a las ventajas de rodar con 
+                  talento y/o equipo sindicalizado o no sindicalizado. Además, nos aseguramos 
+                  de que el casting, la búsqueda de localizaciones, los requisitos de seguro, 
+                  la nómina, la búsqueda de celebridades y los servicios al cliente se adapten 
+                  a las necesidades específicas de su proyecto.
+                </p>
+                <p class="ps-info--text">
+                  Con oficinas en CDMX, Bogotá, Lima y Miami, somos capaces de realizar rodajes 
+                  en diversos formatos -desde DSLR hasta realidad virtual, digital, cine, etc.- en 
+                  toda Sudamérica incluyendo México, Miami, LA y el Caribe. Ningún trabajo es demasiado 
+                  grande o demasiado pequeño, ya que se pueden adaptar soluciones profesionales a                   
+                  prácticamente cualquier presupuesto. Algunas estimaciones de costes de vídeos comerciales, 
+                  web y musicales, así como propuestas de localización de bibliotecas, se pueden entregar en 
+                  24 horas o menos.
+                </p>
+              </div>
               <div class="ps-info--logos">
                 <img src="./assets/logo1.4c0ae86c.png" alt="logo1" /><img
                   src="./assets/logo2.89473661.png"

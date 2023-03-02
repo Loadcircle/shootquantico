@@ -333,22 +333,7 @@
   <script src="https://player.vimeo.com/api/player.js"></script>
 
   <script>
-    window.addEventListener('load', ()=>{
-      const modalContainer = document.querySelectorAll('.modalContainer');
-      modalContainer.forEach(e=>{
-        const iframe = e.querySelector('iframe');
-        const player = new Vimeo.Player(iframe);
-
-        e.addEventListener('open_modal', ()=>{
-          player.setCurrentTime(0);
-          player.play();
-        });
-        e.addEventListener('close_modal', ()=>{
-          player.pause();
-          player.setCurrentTime(0);
-        });
-      });
-    });
+    
   </script>
 
 <?php include("template_base/footer.php"); ?>

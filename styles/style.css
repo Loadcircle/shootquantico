@@ -1111,7 +1111,7 @@ span.icon_down:hover {
     width: 24%
 }
 
-.colab--top p:last-child {
+.colab--top .colab-p {
     width: 59vw
 }
 
@@ -1315,7 +1315,7 @@ span.icon_down:hover {
     }
 }
 
-.manifiesto__wrapper>h3:first-of-type {
+.manifiesto__wrapper h3:first-child {
     margin-bottom: 2rem
 }
 

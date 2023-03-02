@@ -64,15 +64,15 @@
     </div>
     <div class="menu-secondary-navigation">
       <ul>
-        <li class="countryBtn" data-country="us">U.S.</li>
+        <li class="countryBtn" data-country="u.s.">U.S.</li>
         <li class="countryBtn" data-country="peru">PERÚ</li>
-        <li class="countryBtn active" data-country="colombia">COLOMBIA</li>
+        <li class="countryBtn" data-country="colombia">COLOMBIA</li>
         <li class="countryBtn" data-country="mexico">MEXICO</li>
       </ul>
     </div>
     <div class="menu-languages">
       <ul>
-        <li data-lang="en" class="langBtn active">EN</li>
+        <li data-lang="en" class="langBtn">EN</li>
         <li data-lang="es" class="langBtn">ES</li>
       </ul>
     </div>
