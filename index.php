@@ -218,6 +218,23 @@
           />
         </div>
       </div>
+
+      <div class="grid-popup">
+        <div class="grid-popup-container">
+          <div style="width: 100%; height: 100%;">
+            <div data-vimeo-initialized="true" style="width: 100%; height: 100%; overflow: hidden;">
+              <iframe src="https://player.vimeo.com/video/734045851?h=bfd3f0ee8f&amp;title=0&amp;byline=0&amp;portrait=0&amp;playsinline=0&amp;autoplay=1&amp;autopause=0&amp;app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Daniel + Rafo / Cuenta Millonaria - Rapada / BCP" data-ready="true" style="width: 100%; height: 100%;">
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <button>
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+            <path fill="none" d="M0 0h24v24H0z"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+          </svg>
+        </button>
+      </div>
+
     </div>
   </main>
 
