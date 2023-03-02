@@ -69,7 +69,7 @@
               </div>
             </div>
             <a href="#ps-info" class="grid-item-down">
-              <img src="./assets/icon-scroll-down.bbf41f5a.svg" alt="" />
+              <img src="./assets/icon-scroll-down.bbf41f5a.svg" alt="scroll" />
             </a>
           </div>
           <div class="ps-info" id="ps-info">
@@ -126,7 +126,6 @@
 
         player.play();
       }
-
     </script>
 
     

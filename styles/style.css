@@ -2078,6 +2078,18 @@ span.icon_down:hover {
     align-items: center
 }
 
+.modalContainer{
+    display: none;
+    opacity: 0;
+    transition: opacity .4s;
+}
+.modalContainer.active{
+    display: block;    
+}
+.modalContainer.visible_modal{
+    opacity: 1;
+}
+
 .grid-root .grid-popup .grid-popup-container {
     width: 95%;
     height: 95%

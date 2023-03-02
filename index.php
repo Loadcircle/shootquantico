@@ -147,13 +147,13 @@
             <div class="grid-slider-dot"></div>
             <div class="grid-slider-dot"></div>
           </div>
-          <button class="grid-slider-down">
-            <img src="/static/media/icon-scroll-down.bbf41f5a.svg" alt="" />
-          </button>
+          <a href="#grid-videos" class="grid-slider-down">
+            <img src="./assets/icon-scroll-down.bbf41f5a.svg" alt="scroll" />
+          </a>
         </div>
       </div>
       <div class="grid-container gap" id="grid-videos">
-        <div class="grid-item">
+        <div class="grid-item toggleModal" data-target="modal_1">
           <div class="grid-item-hover">
             <p class="grid-item-hover--name">
               BCP - Cuenta Millonaria - Rapada
@@ -165,7 +165,7 @@
             alt="imagen"
           />
         </div>
-        <div class="grid-item">
+        <div class="grid-item toggleModal" data-target="modal_2">
           <div class="grid-item-hover">
             <p class="grid-item-hover--name">
               Interbank - Vas a Retirar tu AFP
@@ -177,7 +177,7 @@
             alt="imagen"
           />
         </div>
-        <div class="grid-item">
+        <div class="grid-item toggleModal" data-target="modal_3">
           <div class="grid-item-hover">
             <p class="grid-item-hover--name">Geely - Tu Geely Sabe</p>
             <p class="grid-item-hover--author">Daniel + Rafo</p>
@@ -187,7 +187,7 @@
             alt="imagen"
           />
         </div>
-        <div class="grid-item">
+        <div class="grid-item toggleModal" data-target="modal_4">
           <div class="grid-item-hover">
             <p class="grid-item-hover--name">Caja Piura - 40 Aniversario</p>
             <p class="grid-item-hover--author">Jeff Carrera</p>
@@ -197,7 +197,7 @@
             alt="imagen"
           />
         </div>
-        <div class="grid-item">
+        <div class="grid-item toggleModal" data-target="modal_5">
           <div class="grid-item-hover">
             <p class="grid-item-hover--name">Ford - Ford Escape 2020</p>
             <p class="grid-item-hover--author">Rafa Carvalho</p>
@@ -207,7 +207,7 @@
             alt="imagen"
           />
         </div>
-        <div class="grid-item">
+        <div class="grid-item toggleModal" data-target="modal_6">
           <div class="grid-item-hover">
             <p class="grid-item-hover--name">Pepsi - #ModoFutbol</p>
             <p class="grid-item-hover--author">Diego Fried</p>
@@ -219,23 +219,136 @@
         </div>
       </div>
 
-      <div class="grid-popup">
-        <div class="grid-popup-container">
-          <div style="width: 100%; height: 100%;">
-            <div data-vimeo-initialized="true" style="width: 100%; height: 100%; overflow: hidden;">
-              <iframe src="https://player.vimeo.com/video/734045851?h=bfd3f0ee8f&amp;title=0&amp;byline=0&amp;portrait=0&amp;playsinline=0&amp;autoplay=1&amp;autopause=0&amp;app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Daniel + Rafo / Cuenta Millonaria - Rapada / BCP" data-ready="true" style="width: 100%; height: 100%;">
-              </iframe>
+      <div class="modalContainer" id="modal_1">
+        <div class="grid-popup">
+          <div class="grid-popup-container modalContent">
+            <div style="width: 100%; height: 100%;">
+              <div data-vimeo-initialized="true" style="width: 100%; height: 100%; overflow: hidden;">
+                <iframe src="https://player.vimeo.com/video/734045851?h=bfd3f0ee8f&amp;title=0&amp;byline=0&amp;portrait=0&amp;playsinline=0&amp;autoplay=1&amp;autopause=0&amp;app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Daniel + Rafo / Cuenta Millonaria - Rapada / BCP" data-ready="true" style="width: 100%; height: 100%;">
+                </iframe>
+              </div>
             </div>
           </div>
+          <button class="closeItemModal">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+              <path fill="none" d="M0 0h24v24H0z"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+          </button>
         </div>
-        <button>
-          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: white;">
-            <path fill="none" d="M0 0h24v24H0z"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-          </svg>
-        </button>
+      </div>
+      
+      <div class="modalContainer" id="modal_2">
+        <div class="grid-popup">
+          <div class="grid-popup-container modalContent">
+            <div style="width: 100%; height: 100%;">
+              <div data-vimeo-initialized="true" style="width: 100%; height: 100%; overflow: hidden;">
+                <iframe src="https://player.vimeo.com/video/723595182?h=8f2f8a1c43&title=0&byline=0&portrait=0&playsinline=0&autoplay=1&autopause=0&app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Interbank - Vas a Retirar tu AFP" data-ready="true" style="width: 100%; height: 100%;">
+                </iframe>
+              </div>
+            </div>
+          </div>
+          <button class="closeItemModal">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+              <path fill="none" d="M0 0h24v24H0z"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <div class="modalContainer" id="modal_3">
+        <div class="grid-popup">
+          <div class="grid-popup-container modalContent">
+            <div style="width: 100%; height: 100%;">
+              <div data-vimeo-initialized="true" style="width: 100%; height: 100%; overflow: hidden;">
+                <iframe src="https://player.vimeo.com/video/734043283?h=006aeaa151&title=0&byline=0&portrait=0&playsinline=0&autoplay=1&autopause=0&app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Geely - Tu Geely Sabe" data-ready="true" style="width: 100%; height: 100%;">
+                </iframe>
+              </div>
+            </div>
+          </div>
+          <button class="closeItemModal">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+              <path fill="none" d="M0 0h24v24H0z"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <div class="modalContainer" id="modal_4">
+        <div class="grid-popup">
+          <div class="grid-popup-container modalContent">
+            <div style="width: 100%; height: 100%;">
+              <div data-vimeo-initialized="true" style="width: 100%; height: 100%; overflow: hidden;">
+                <iframe src="https://player.vimeo.com/video/677905026?h=6b9cc3bb8c&title=0&byline=0&portrait=0&playsinline=0&autoplay=1&autopause=0&app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Caja Piura - 40 Aniversario" data-ready="true" style="width: 100%; height: 100%;">
+                </iframe>
+              </div>
+            </div>
+          </div>
+          <button class="closeItemModal">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+              <path fill="none" d="M0 0h24v24H0z"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <div class="modalContainer" id="modal_5">
+        <div class="grid-popup">
+          <div class="grid-popup-container modalContent">
+            <div style="width: 100%; height: 100%;">
+              <div data-vimeo-initialized="true" style="width: 100%; height: 100%; overflow: hidden;">
+                <iframe src="https://player.vimeo.com/video/390092712?h=a434fd59a8&title=0&byline=0&portrait=0&playsinline=0&autoplay=1&autopause=0&app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Ford - Ford Escape 2020" data-ready="true" style="width: 100%; height: 100%;">
+                </iframe>
+              </div>
+            </div>
+          </div>
+          <button class="closeItemModal">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+              <path fill="none" d="M0 0h24v24H0z"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <div class="modalContainer" id="modal_6">
+        <div class="grid-popup">
+          <div class="grid-popup-container modalContent">
+            <div style="width: 100%; height: 100%;">
+              <div data-vimeo-initialized="true" style="width: 100%; height: 100%; overflow: hidden;">
+                <iframe src="https://player.vimeo.com/video/274180054?h=4e5f86251c&title=0&byline=0&portrait=0&playsinline=0&autoplay=1&autopause=0&app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="Pepsi - #ModoFutbol" data-ready="true" style="width: 100%; height: 100%;">
+                </iframe>
+              </div>
+            </div>
+          </div>
+          <button class="closeItemModal">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+              <path fill="none" d="M0 0h24v24H0z"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+          </button>
+        </div>
       </div>
 
     </div>
   </main>
+
+  <script src="https://player.vimeo.com/api/player.js"></script>
+
+  <script>
+    window.addEventListener('load', ()=>{
+      const modalContainer = document.querySelectorAll('.modalContainer');
+      modalContainer.forEach(e=>{
+        const iframe = e.querySelector('iframe');
+        const player = new Vimeo.Player(iframe);
+
+        e.addEventListener('open_modal', ()=>{
+          player.setCurrentTime(0);
+          player.play();
+        });
+        e.addEventListener('close_modal', ()=>{
+          player.pause();
+          player.setCurrentTime(0);
+        });
+      });
+    });
+  </script>
 
 <?php include("template_base/footer.php"); ?>
