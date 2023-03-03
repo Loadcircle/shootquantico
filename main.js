@@ -7,11 +7,11 @@ const changeCopyByLang = ()=>{
 
     //default to es
     if(lang == 'en'){
-        esContent.forEach(e=>e.style.display = 'none');
-        enContent.forEach(e=>e.style.display = 'block');
+        esContent.forEach(e=>e.style.display = 'none!important');
+        enContent.forEach(e=>e.style.display = 'block!important');
     }else{
-        enContent.forEach(e=>e.style.display = 'none');
-        esContent.forEach(e=>e.style.display = 'block');
+        enContent.forEach(e=>e.style.display = 'none!important');
+        esContent.forEach(e=>e.style.display = 'block!important');
     }
 };
 changeCopyByLang();
